@@ -3,11 +3,11 @@ name: Build luci-app-tinyfm
 on:
   push:
     paths:
-      - 'Makefile' # Trigger hanya jika file Makefile berubah
+      - 'Makefile'  # Trigger hanya jika file Makefile berubah
   pull_request:
     paths:
-      - 'Makefile' # Trigger hanya jika file Makefile berubah
-  workflow_dispatch: # Memungkinkan action dijalankan secara manual
+      - 'Makefile'  # Trigger hanya jika file Makefile berubah
+  workflow_dispatch:  # Memungkinkan action dijalankan secara manual
 
 jobs:
   build:
@@ -30,8 +30,10 @@ jobs:
 
     - name: Copy luci-app-tinyfm to SDK
       run: |
-        mkdir -p openwrt-sdk/package/luci-app-tinyfm
-        cp -r . openwrt-sdk/package/luci-app-tinyfm/
+        # Pindah ke folder kerja yang tepat sebelum membuat direktori dan menyalin
+        cd openwrt-sdk
+        mkdir -p package/luci-app-tinyfm
+        cp -r ../. package/luci-app-tinyfm/  # Pastikan menyalin dari direktori yang benar
 
     - name: Build luci-app-tinyfm
       run: |
