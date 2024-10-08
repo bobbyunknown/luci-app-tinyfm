@@ -43,7 +43,7 @@ jobs:
 
           echo -e "\033[34m📦 Cloning $PKG_NAME package \033[0m"
           git clone -q https://github.com/${{ github.repository }} sdk/package/${PKG_NAME}
-          chmod +x sdk/package/${PKG_NAME}/root/usr/share/speedtest/schedule
+          chmod +x sdk/package/${PKG_NAME}/root/usr/bin/tinyfm.sh
 
       - name: 📡 Set up SDK feeds
         run: |
