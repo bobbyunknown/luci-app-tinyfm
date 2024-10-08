@@ -4,6 +4,9 @@
 
 TinyFM adalah aplikasi manajemen file berbasis web yang ringan dan mudah digunakan untuk OpenWrt. Aplikasi ini memungkinkan pengguna untuk mengelola file dan direktori pada router OpenWrt melalui antarmuka web yang intuitif.
 
+### Telegram group:
+[![SanTech](https://img.shields.io/badge/SanTech-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/+TuLCASzJrVJmNzM1)
+
 ## Fitur Utama
 
 - Antarmuka web yang responsif dan mudah digunakan
