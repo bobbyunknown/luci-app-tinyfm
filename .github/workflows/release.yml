@@ -31,13 +31,21 @@ jobs:
           mkdir -p openwrt-sdk/package/luci-app-tinyfm
           rsync -av --exclude='openwrt-sdk' . openwrt-sdk/package/luci-app-tinyfm/
 
-      - name: 🔨 Build package
+      - name: 🛠️ Configure Build
         run: |
           cd openwrt-sdk
           ./scripts/feeds update -a
           ./scripts/feeds install -a
           make defconfig
+
+      - name: 🔨 Build package
+        run: |
+          cd openwrt-sdk
           make package/luci-app-tinyfm/compile V=s
+
+      - name: 🗂️ List Build Directory
+        run: |
+          ls -R openwrt-sdk/package/luci-app-tinyfm
 
       - name: 📤 Upload IPK
         uses: actions/upload-artifact@v3
