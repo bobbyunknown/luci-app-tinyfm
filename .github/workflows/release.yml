@@ -30,10 +30,9 @@ jobs:
 
     - name: Copy luci-app-tinyfm to SDK
       run: |
-        # Pindah ke folder kerja yang tepat sebelum membuat direktori dan menyalin
         cd openwrt-sdk
         mkdir -p package/luci-app-tinyfm
-        cp -r ../. package/luci-app-tinyfm/  # Pastikan menyalin dari direktori yang benar
+        cp -r ../htdocs/luci-static/resources/view/tinyfm/* package/luci-app-tinyfm/  # Menyalin isi folder tinyfm ke dalam package/luci-app-tinyfm
 
     - name: Build luci-app-tinyfm
       run: |
