@@ -58,9 +58,9 @@ Aplikasi ini disediakan "sebagaimana adanya", tanpa jaminan apapun. Gunakan deng
 <details>
 <summary>Klik untuk melihat tangkapan layar</summary>
 
-![Screenshot 1](img/Snag_147110b2.png)
-![Screenshot 2](img/Snag_147111eb.png)
+![Screenshot 1](img/Snag_14710b2.png)
+![Screenshot 2](img/Snag_14711eb.png)
 ![Screenshot 3](img/Snag_147117e.png)
-![Screenshot 4](img/Snag_147120.png)
+![Screenshot 4](img/Snag_1471120.png)
 
 </details>
