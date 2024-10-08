@@ -1,6 +1,6 @@
 # TinyFM untuk OpenWrt
-![Downloads](https://img.shields.io/github/downloads/bobbyunknown/subdomain-scanner/total)
-![Visitors](https://visitor-badge.laobi.icu/badge?page_id=bobbyunknown.subdomain-scanner)
+![Downloads](https://img.shields.io/github/downloads/bobbyunknown/luci-app-tinyfm/total)
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=bobbyunknown.luci-app-tinyfm)
 
 TinyFM adalah aplikasi manajemen file berbasis web yang ringan dan mudah digunakan untuk OpenWrt. Aplikasi ini memungkinkan pengguna untuk mengelola file dan direktori pada router OpenWrt melalui antarmuka web yang intuitif.
 
