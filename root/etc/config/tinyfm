@@ -1,0 +1,11 @@
+config tinyfm 'auth'
+	option enable '1'
+	option pilihan 'rootfs'
+
+config tinyfm 'symlink'
+	option rootfs '/'
+	option openclash '/etc/openclash'
+	option mihomo '/etc/mihomo'
+	option script_path '/usr/bin/tinyfm.sh'
+	option pilihan 'rootfs'
+
