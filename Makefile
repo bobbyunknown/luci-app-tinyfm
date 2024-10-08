@@ -44,11 +44,15 @@ endef
 define Package/$(PKG_NAME)/install
 	# Install PHP files
 	$(INSTALL_DIR) $(1)/www/tinyfm
-	$(CP) $(PKG_BUILD_DIR)/www/* $(1)/www/tinyfm/
+	$(CP) $(PKG_BUILD_DIR)/tinyfm/*.php $(1)/www/tinyfm/
 
 	# Install Shell scripts
 	$(INSTALL_DIR) $(1)/usr/bin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/bin/*.sh $(1)/usr/bin/
+	$(CP) $(PKG_BUILD_DIR)/bin/*.sh $(1)/usr/bin/
+	$(INSTALL_BIN) $(1)/usr/bin/tinyfm.sh
+
+	# Set permissions for the shell script
+	$(CHMOD) 755 $(1)/usr/bin/tinyfm.sh
 
 	# Install JS dan resource lainnya
 	$(INSTALL_DIR) $(1)/www/luci-static/resources/view/tinyfm
