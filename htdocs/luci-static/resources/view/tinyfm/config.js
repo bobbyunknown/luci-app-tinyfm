@@ -44,13 +44,16 @@ return view.extend({
 
         o = s.taboption('general', form.Value, 'username', _('Username'),
             _('Masukkan username untuk autentikasi'));
+        o.depends('enable', '1');
 
         o = s.taboption('general', form.Value, 'password', _('Password'),
             _('Masukkan password yang telah di-hash untuk autentikasi'));
         o.password = true;
+        o.depends('enable', '1');
 
         o = s.taboption('general', form.Value, 'readonly_users', _('Pengguna Hanya-Baca'),
             _('Daftar pengguna dengan akses hanya-baca, pisahkan dengan spasi'));
+        o.depends('enable', '1');
 
         // Tab Buat Symlink
         var scriptPath = '/usr/bin/tinyfm.sh';
