@@ -32,13 +32,26 @@ jobs:
       run: |
         cd openwrt-sdk
         mkdir -p package/luci-app-tinyfm
-        cp -r ../htdocs/luci-static/resources/view/tinyfm/* package/luci-app-tinyfm/  # Menyalin isi folder tinyfm ke dalam package/luci-app-tinyfm
+        # Salin semua file dari htdocs/luci-static/resources/view
+        cp -r ../htdocs/luci-static/resources/view/* package/luci-app-tinyfm/
+        # Salin semua file dari htdocs/tinyfm
+        cp -r ../htdocs/tinyfm/* package/luci-app-tinyfm/
+        # Salin file dari root/usr/bin
+        cp -r ../root/usr/bin/* package/luci-app-tinyfm/usr/bin/
+        # Salin file dari root/etc/config
+        cp -r ../root/etc/config/* package/luci-app-tinyfm/etc/config/
+        # Salin file dari root/usr/share/luci/menu.d
+        cp -r ../root/usr/share/luci/menu.d/* package/luci-app-tinyfm/usr/share/luci/menu.d/
+        # Salin file dari root/usr/share/rpcd/acl.d
+        cp -r ../root/usr/share/rpcd/acl.d/* package/luci-app-tinyfm/usr/share/rpcd/acl.d/
+        # Salin Makefile dari root
+        cp ../Makefile package/luci-app-tinyfm/
 
     - name: Build luci-app-tinyfm
       run: |
         cd openwrt-sdk
         make defconfig
-        make package/luci-app-tinyfm/compile V=s
+        make package/luci-app-tinyfm/compile V=s  # Pastikan folder ini berisi Makefile
 
     - name: Upload built package
       uses: actions/upload-artifact@v3
