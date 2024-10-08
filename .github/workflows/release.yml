@@ -2,11 +2,12 @@ name: Build luci-app-tinyfm
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - 'Makefile' # Trigger hanya jika file Makefile berubah
   pull_request:
-    branches:
-      - main
+    paths:
+      - 'Makefile' # Trigger hanya jika file Makefile berubah
+  workflow_dispatch: # Memungkinkan action dijalankan secara manual
 
 jobs:
   build:
