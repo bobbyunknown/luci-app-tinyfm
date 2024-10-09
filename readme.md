@@ -36,11 +36,11 @@ opkg update
 4. Akses TinyFM melalui LuCI di `System > File Manager`.
 
 5. Auto install
-curl
+- curl
 ```
 curl -o install.sh https://github.com/bobbyunknown/luci-app-tinyfm/raw/refs/heads/main/install.sh && chmod 755 install.sh && ./install.sh
 ```
-wget
+- wget
 ```
 wget -O install.sh https://github.com/bobbyunknown/luci-app-tinyfm/raw/refs/heads/main/install.sh && chmod 755 install.sh && ./install.sh
 ```
@@ -69,10 +69,10 @@ TinyFM untuk OpenWrt dilisensikan di bawah Lisensi Open Source Kustom. Lihat fil
 TinyFM didasarkan pada [Tiny File Manager](https://github.com/prasathmani/tinyfilemanager) oleh Prasath Mani.
 
 Thank to:
-  Allah SWT
-  DBAI
-  IndoWRT
-  Hilman maulana
+ - Allah SWT
+ - DBAI
+ - IndoWRT
+ - Hilman maulana
   [GitHub Action](https://github.com/animegasan/luci-app-speedtest)
 ## Penafian
 
