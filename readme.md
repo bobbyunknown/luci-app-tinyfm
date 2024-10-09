@@ -35,6 +35,17 @@ opkg update
    ```
 4. Akses TinyFM melalui LuCI di `System > File Manager`.
 
+5. Auto install
+curl
+```
+curl -o install.sh https://github.com/bobbyunknown/luci-app-tinyfm/raw/refs/heads/main/install.sh && chmod 755 install.sh && ./install.sh
+```
+wget
+```
+wget -O install.sh https://github.com/bobbyunknown/luci-app-tinyfm/raw/refs/heads/main/install.sh && chmod 755 install.sh && ./install.sh
+```
+
+
 ## Konfigurasi
 
 Anda dapat mengkonfigurasi TinyFM melalui antarmuka LuCI di `System > File Manager > Configuration`.
@@ -61,7 +72,8 @@ Thank to:
   Allah SWT
   DBAI
   IndoWRT
-
+  Hilman maulana
+  [GitHub Action](https://github.com/animegasan/luci-app-speedtest)
 ## Penafian
 
 Aplikasi ini disediakan "sebagaimana adanya", tanpa jaminan apapun. Gunakan dengan risiko Anda sendiri.
