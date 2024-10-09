@@ -21,7 +21,13 @@ TinyFM adalah aplikasi manajemen file berbasis web yang ringan dan mudah digunak
 
 ## Instalasi
 
-1. Unduh paket ipk terbaru dari [halaman rilis](https://github.com/bobbyunknown/luci-app-tinyfm/releases).
+1. Install dependensi
+```
+opkg update
++php8 +php8-cgi +php8-fastcgi +php8-fpm +php8-mod-session +php8-mod-ctype +php8-mod-fileinfo +php8-mod-zip +php8-mod-iconv +php8-mod-mbstring +coreutils-stat +zoneinfo-asia +bash +curl +tar
+```
+
+2. Unduh paket ipk terbaru dari [halaman rilis](https://github.com/bobbyunknown/luci-app-tinyfm/releases).
 2. Unggah paket ke router OpenWrt Anda.
 3. Instal paket menggunakan perintah berikut:
    ```
@@ -50,6 +56,11 @@ TinyFM untuk OpenWrt dilisensikan di bawah Lisensi Open Source Kustom. Lihat fil
 ## Kredit
 
 TinyFM didasarkan pada [Tiny File Manager](https://github.com/prasathmani/tinyfilemanager) oleh Prasath Mani.
+
+Thank to:
+  Allah SWT
+  DBAI
+  IndoWRT
 
 ## Penafian
 
