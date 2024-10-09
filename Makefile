@@ -1,4 +1,11 @@
+# Ini adalah perangkat lunak open source, dilisensikan di bawah Lisensi Open Source Kustom
 #
+# Hak Cipta (C) 2024 BobbyUnknown
+#
+# Deskripsi:
+# Perangkat lunak ini menyediakan aplikasi filemanager tinyfilemanager untuk OpenWrt.
+# Aplikasi ini memungkinkan pengguna untuk mengelola file dan direktori pada router
+# OpenWrt melalui antarmuka web yang mudah digunakan.
 include $(TOPDIR)/rules.mk
 
 LUCI_TITLE:=LuCI Filemanager
