@@ -24,10 +24,16 @@ fi
 # Unduh dan instal luci-app-tinyfm
 echo "Mengunduh luci-app-tinyfm..."
 curl -L -o /tmp/luci-app-tinyfm.ipk "$LATEST_RELEASE_URL"
+
+if [ ! -f /tmp/luci-app-tinyfm.ipk ]; then
+    echo "Gagal mengunduh file. Keluar."
+    exit 1
+fi
+
 echo "Menginstal luci-app-tinyfm..."
 opkg install /tmp/luci-app-tinyfm.ipk
 
 # Bersihkan file sementara
-rm /tmp/luci-app-tinyfm.ipk
+rm -f /tmp/luci-app-tinyfm.ipk
 
 echo "Instalasi selesai!"

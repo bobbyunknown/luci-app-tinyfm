@@ -38,11 +38,7 @@ opkg update
 5. Auto install
 - curl
 ```
-curl -o install.sh https://github.com/bobbyunknown/luci-app-tinyfm/raw/refs/heads/main/install.sh && chmod 755 install.sh && ./install.sh
-```
-- wget
-```
-wget -O install.sh https://github.com/bobbyunknown/luci-app-tinyfm/raw/refs/heads/main/install.sh && chmod 755 install.sh && ./install.sh
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/bobbyunknown/luci-app-tinyfm/refs/heads/main/install.sh)"
 ```
 
 
