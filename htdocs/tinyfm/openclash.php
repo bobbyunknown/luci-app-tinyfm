@@ -171,6 +171,7 @@ if (is_readable($config_file)) {
 }
 
 // External CDN resources that can be used in the HTML (replace for GDPR compliance)
+// External CDN resources that can be used in the HTML (replace for GDPR compliance)
 $external = array(
     'css-bootstrap' => '<link href="css/bootstrap.min.css" rel="stylesheet">',
     'css-dropzone' => '<link href="css/dropzone.min.css" rel="stylesheet">',
