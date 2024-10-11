@@ -1,6 +1,9 @@
 config tinyfm 'auth'
 	option enable '1'
-	option pilihan 'rootfs'
+	option pilihan 'mihomo'
+	option username 'admin'
+	option password '$2y$10$mNORLB8mf7am3ywMYSTUOehQhIUSDEe5Yes/4NRXUgsPmE0hQxNBS'
+	option readonly_users 'user'
 
 config tinyfm 'symlink'
 	option rootfs '/'
