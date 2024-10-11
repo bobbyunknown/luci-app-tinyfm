@@ -20,12 +20,31 @@ install_package() {
     opkg update && opkg install php8 php8-cgi php8-fastcgi php8-fpm php8-mod-session php8-mod-ctype php8-mod-fileinfo php8-mod-zip php8-mod-iconv php8-mod-mbstring coreutils-stat zoneinfo-asia bash curl tar
     
     DOWNLOAD_URL=$(get_latest_release_url)
+    if [ -z "$DOWNLOAD_URL" ]; then
+        echo "Gagal mendapatkan URL unduhan. Silakan coba lagi nanti."
+        return 1
+    fi
+    
     FILENAME=$(basename "$DOWNLOAD_URL")
-    wget -O "/tmp/$FILENAME" "$DOWNLOAD_URL"
+    echo "Mengunduh $FILENAME..."
+    if ! wget -O "/tmp/$FILENAME" "$DOWNLOAD_URL"; then
+        echo "Gagal mengunduh file. Silakan periksa koneksi internet Anda."
+        return 1
+    fi
     
-    opkg install "/tmp/$FILENAME"
+    if [ ! -f "/tmp/$FILENAME" ]; then
+        echo "File tidak ditemukan setelah unduhan. Silakan coba lagi."
+        return 1
+    fi
     
-    rm "/tmp/$FILENAME"
+    echo "Menginstal paket..."
+    if ! opkg install "/tmp/$FILENAME"; then
+        echo "Gagal menginstal paket. Silakan coba opsi force install."
+        rm -f "/tmp/$FILENAME"
+        return 1
+    fi
+    
+    rm -f "/tmp/$FILENAME"
     echo "Instalasi $PACKAGE_NAME selesai."
     read -p "Tekan Enter untuk melanjutkan..."
 }
@@ -35,12 +54,31 @@ force_install_package() {
     opkg update && opkg install php8 php8-cgi php8-fastcgi php8-fpm php8-mod-session php8-mod-ctype php8-mod-fileinfo php8-mod-zip php8-mod-iconv php8-mod-mbstring coreutils-stat zoneinfo-asia bash curl tar
     
     DOWNLOAD_URL=$(get_latest_release_url)
+    if [ -z "$DOWNLOAD_URL" ]; then
+        echo "Gagal mendapatkan URL unduhan. Silakan coba lagi nanti."
+        return 1
+    fi
+    
     FILENAME=$(basename "$DOWNLOAD_URL")
-    wget -O "/tmp/$FILENAME" "$DOWNLOAD_URL"
+    echo "Mengunduh $FILENAME..."
+    if ! wget -O "/tmp/$FILENAME" "$DOWNLOAD_URL"; then
+        echo "Gagal mengunduh file. Silakan periksa koneksi internet Anda."
+        return 1
+    fi
     
-    opkg install --force-reinstall "/tmp/$FILENAME"
+    if [ ! -f "/tmp/$FILENAME" ]; then
+        echo "File tidak ditemukan setelah unduhan. Silakan coba lagi."
+        return 1
+    fi
     
-    rm "/tmp/$FILENAME"
+    echo "Melakukan force install paket..."
+    if ! opkg install --force-reinstall "/tmp/$FILENAME"; then
+        echo "Gagal melakukan force install paket."
+        rm -f "/tmp/$FILENAME"
+        return 1
+    fi
+    
+    rm -f "/tmp/$FILENAME"
     echo "Force install $PACKAGE_NAME selesai."
     read -p "Tekan Enter untuk melanjutkan..."
 }
