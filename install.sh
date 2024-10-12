@@ -86,8 +86,8 @@ force_install_package() {
 uninstall_package() {
     echo "Menghapus $PACKAGE_NAME..."
     opkg remove "$PACKAGE_NAME"
-    find / -type d -name "*openclash*" -exec rm -rf {} + 2>/dev/null
-    find / -type f -name "*openclash*" -delete 2>/dev/null
+    find / -type d -name "*tinyfm*" -exec rm -rf {} + 2>/dev/null
+    find / -type f -name "*tinyfm*" -delete 2>/dev/null
     echo "Paket $PACKAGE_NAME dan file-file terkait berhasil dihapus."
     read -p "Tekan Enter untuk melanjutkan..."
 }

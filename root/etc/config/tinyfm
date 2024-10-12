@@ -11,4 +11,3 @@ config tinyfm 'symlink'
 	option mihomo '/etc/mihomo'
 	option script_path '/usr/bin/tinyfm.sh'
 	option pilihan 'rootfs'
-
