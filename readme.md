@@ -1,6 +1,7 @@
 # TinyFM untuk OpenWrt
-[![GitHub Downloads](https://img.shields.io/github/downloads/bobbyunknown/luci-app-tinyfm/total?style=for-the-badge&logo=github)](https://github.com/bobbyunknown/luci-app-tinyfm/releases)
-[![GitHub Views](https://komarev.com/ghpvc/?username=bobbyunknown&repo=luci-app-tinyfm&style=for-the-badge&color=brightgreen&label=VIEWS)](https://github.com/bobbyunknown/luci-app-tinyfm)
+[![GitHub Downloads](https://img.shields.io/github/downloads/bobbyunknown/luci-app-tinyfm/total?style=for-the-badge)](https://github.com/bobbyunknown)
+[![GitHub Release](https://img.shields.io/github/v/release/bobbyunknown/luci-app-tinyfm?style=for-the-badge)](https://github.com/bobbyunknown/luci-app-tinyfm/releases)
+
 
 TinyFM adalah aplikasi manajemen file berbasis web yang ringan dan mudah digunakan untuk OpenWrt. Aplikasi ini memungkinkan pengguna untuk mengelola file dan direktori pada router OpenWrt melalui antarmuka web yang intuitif.
 
